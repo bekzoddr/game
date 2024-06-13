@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    position: relative;
+
+    p {
+        font-weight: 500;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.buttons {
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    gap: 20px;
+
+    .button {
+        transition: top 0.3s, left 0.3s;
+    }
+
+    .movable {
+        margin-top: 25px;
+        position: absolute;
+        display: flex;
+        white-space: nowrap;
+        background-color: red;
+
+        &:hover {
+            background-color: red;
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+
+        p {
+            font-size: 24px;
+        }
+    }
+
+    .buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 15px;
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .box {
+        padding: 10px;
+        width: 300px;
+        height: 100%;
+
+        img {
+            width: 250px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    .buttons {
+        gap: 5px;
+    }
+}
